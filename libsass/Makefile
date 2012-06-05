@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -Wall -O2
+CFLAGS=-c -Wall -O2 -fPIC
 LDFLAGS=
 SOURCES = \
 	context.cpp functions.cpp document.cpp \
