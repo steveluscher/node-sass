@@ -15,6 +15,9 @@ def configure(conf):
     conf.env.libsass_compiled = exists("./libsass/libsass.a")
 
 def build(bld):
+    if bld.env.libsass_compiled == False:
+      bld.exec_command("cd ../libsass;make")
+  
     obj = bld.new_task_gen("cxx", "shlib", "node_addon")
     obj.uselib = "sass"
     obj.target = "binding"
