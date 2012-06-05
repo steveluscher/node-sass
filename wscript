@@ -23,4 +23,5 @@ def build(bld):
     obj.target = "binding"
     obj.source = "binding.cpp "
     obj.use = ['LIB_SASS']
+    obj.cflags = ['-fPIC']
     obj.add_obj_file("./libsass/libsass.a")
