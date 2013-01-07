@@ -39,6 +39,8 @@ struct sass_folder_context {
   struct sass_options options;
   int error_status;
   char* error_message;
+  uv_work_t request;
+  v8::Persistent<v8::Function> callback;
 };
 
 struct sass_context*        sass_new_context        (void);
