@@ -24,6 +24,7 @@
     "url": "git://github.com/andrew/node-sass.git"
   },
   "scripts": {
+    "preinstall": "git init && git submodule add git://github.com/hcatlin/libsass.git && cd libsass && git checkout 0388a62",
     "install": "node build.js",
     "test": "mocha test",
     "pretest": "jshint .",
